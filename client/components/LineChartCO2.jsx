@@ -4,7 +4,7 @@ import data from '../data'
 import createReactClass from 'create-react-class'
 import {LineChart, Line, XAxis, YAxis, CartesianGrid, Tooltip, Legend} from 'recharts';
 
-const ExampleChart = createReactClass({
+const LineChartCO2 = createReactClass({
 	render(){
   	return (
     	<LineChart width={1000} height={400} data={data}
@@ -24,4 +24,4 @@ const ExampleChart = createReactClass({
 })
 
 
-export default ExampleChart
+export default LineChartCO2

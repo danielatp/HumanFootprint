@@ -1,6 +1,7 @@
 import React from 'react'
 import createReactClass from 'create-react-class'
-import ExampleChart from './ExampleChart.jsx'
+import LineChartCO2 from './LineChartCO2.jsx'
+import AreaChartCO2 from './AreaChartCO2.jsx'
 // import Dropdown from './Dropdown.jsx'
 
 const Home = createReactClass({
@@ -9,7 +10,8 @@ const Home = createReactClass({
       <div>
         <h1>Home</h1>
         {/*<Dropdown />*/}
-        <ExampleChart />
+        <LineChartCO2 />
+        <AreaChartCO2 />
       </div>
 
     );

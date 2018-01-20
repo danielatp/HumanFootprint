@@ -1,5 +1,12 @@
 body {
   margin: 0;
+  background-color: black;
+  background-image: url('./pollution.png');
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  opacity: 0.5;
+  color: salmon;
 }
 #app {
   -webkit-box-sizing: border-box;
@@ -8,5 +15,5 @@ body {
   padding: 10px;
   width: 800px;
   height: 800px;
-  background-color: #fff;
+
 }
