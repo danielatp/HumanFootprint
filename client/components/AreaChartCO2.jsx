@@ -1,5 +1,4 @@
 import React from 'react'
-import data from '../data'
 import createReactClass from 'create-react-class'
 import {AreaChart, Area, XAxis, YAxis, CartesianGrid, Tooltip} from 'recharts';
 
@@ -7,7 +6,7 @@ import {AreaChart, Area, XAxis, YAxis, CartesianGrid, Tooltip} from 'recharts';
 const AreaChartCO2 = createReactClass({
 	render(){
   	return (
-    	<AreaChart width={1000} height={400} data={data}
+    	<AreaChart width={1000} height={400} data={this.props.data}
             margin={{top: 10, right: 30, left: 0, bottom: 0}}>
         <defs>
           <linearGradient id="colorCO2" x1="0" y1="0" x2="0" y2="1">
