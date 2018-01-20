@@ -1,7 +1,7 @@
 {
-  "name": "boilermaker",
+  "name": "stackaton2.0",
   "version": "1.0.0",
-  "description": "Some boilerplate code to get you started - get shakin'!",
+  "description": "",
   "engines": {
     "node": ">= 7.0.0"
   },
@@ -35,9 +35,12 @@
     "pg-hstore": "^2.3.2",
     "prop-types": "^15.5.8",
     "react": "^16.0.0",
+    "react-d3-basic": "^1.6.11",
+    "react-d3-core": "^1.3.9",
     "react-dom": "^16.0.0",
     "react-redux": "^5.0.2",
     "react-router-dom": "^4.1.1",
+    "recharts": "^1.0.0-beta.9",
     "redux": "^3.6.0",
     "redux-logger": "^2.8.1",
     "redux-thunk": "^2.2.0",
