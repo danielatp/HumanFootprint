@@ -1,10 +1,15 @@
-import React from 'react'
+import React, { Component } from 'react'
 import createReactClass from 'create-react-class'
 import {AreaChart, Area, XAxis, YAxis, CartesianGrid, Tooltip} from 'recharts';
 
+export default class AreaChartCO2 extends Component{
 
-const AreaChartCO2 = createReactClass({
-	render(){
+  constructor(props){
+    super(props)
+
+  }
+
+  render(){
   	return (
     	<AreaChart width={1000} height={400} data={this.props.data}
             margin={{top: 10, right: 30, left: 0, bottom: 0}}>
@@ -16,14 +21,12 @@ const AreaChartCO2 = createReactClass({
         </defs>
         <XAxis dataKey="year"/>
         <YAxis
-          ticks={[300, 310, 320, 330, 340, 350, 360, 370, 380, 390, 400, 410, 420]}
-          domain={[300, 420]}/>
+          ticks={this.props.ticks}
+          domain={this.props.domain}/>
         <CartesianGrid strokeDasharray="3 3"/>
         <Tooltip/>
         <Area type='monotone' dataKey='CO2' stroke='#82ca9d' fillOpacity={1} fill="url(#colorCO2)" />
       </AreaChart>
     );
   }
-})
-
-export default AreaChartCO2;
+}
