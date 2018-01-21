@@ -22,7 +22,7 @@ export default class AreaChartCO2 extends Component{
         <XAxis dataKey="year"/>
         <YAxis
           ticks={this.props.ticks}
-          domain={this.props.domain}/>
+          domain={this.props  .domain}/>
         <CartesianGrid strokeDasharray="3 3"/>
         <Tooltip/>
         <Area type='monotone' dataKey='CO2' stroke='#82ca9d' fillOpacity={1} fill="url(#colorCO2)" />

@@ -11,14 +11,17 @@ body {
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
-  color: rgb(247, 247, 195);
+  color: white;
   font-family: 'Roboto Mono', monospace;
 }
 
-h1{
-  margin-top: 5vh;
-  padding: 1vh 0 1vh 5vw;
+#nav{
   background-color:rgba(0,0,0,.5);
+  text-align: center;
+}
+
+h1{
+  padding: 1vh 0 1vh 5vw;
 }
 
 .chart-container{
@@ -26,9 +29,46 @@ h1{
 }
 
 #app {
-
   -webkit-box-sizing: border-box;
   -moz-box-sizing: border-box;
   box-sizing: border-box;
   padding: 10px;
+}
+
+.category-select{
+  width:98vw;
+  color: white;
+  background-color:rgba(0,0,0,.3);
+  font-size: 1.5em;
+  text-align-last: center;
+  border: none;
+  border-radius: 0;
+}
+
+.footprint-container{
+  width: 100vw
+}
+.svg{
+  /* border: 1px solid red; */
+  height: 60vh;
+  width: 80vw;
+}
+
+/* .st0{
+  fill:none;
+  stroke:#45D6DD;
+  stroke-miterlimit:10;
+  stroke-dasharray: 800;
+  stroke-dashoffset: 0;
+  animation: dash 2s linear forwards;
+  -webkit-animation: dash 2s linear forwards;
+} */
+
+@-webkit-keyframes dash {
+  from {
+    stroke-dashoffset:800;
+  }
+  to {
+    stroke-dashoffset:0;
+  }
 }

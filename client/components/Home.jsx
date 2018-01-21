@@ -1,9 +1,11 @@
 import React, { Component } from 'react'
 import createReactClass from 'create-react-class'
-// import LineChartCO2 from './LineChartCO2.jsx'
+import {Route, Link, Switch} from 'react-router-dom'
 import data from '../data';
 import AreaChartCO2 from './AreaChartCO2.jsx'
 import ZoomChartCO2 from './ZoomChartCO2.jsx'
+import Footprint from './Footprint.jsx'
+
 
 export default class Home extends Component{
   constructor(props){
@@ -24,6 +26,12 @@ export default class Home extends Component{
 
     const CelsiusTicks = [-0.5, -0.4, -0.3, -0.2, -0.1, 0, 0.1, 0.2, 0.3, 0.4, 0.5, 0.6, 0.7, 0.8, 0.9, 1];
     const CelsiusDomain = [-0.50, 1];
+
+    if(event.target.value === '- CHOOSE ONE -'){
+      this.setState({
+        currentCategory: event.target.value,
+      })
+    }
 
     if(event.target.value === 'CO2'){
       this.setState({
@@ -46,27 +54,43 @@ export default class Home extends Component{
   render(){
     return (
       <div>
-        <h1>Home's Vital Signs</h1>
-        <select name="category" onChange={this.handleCategoryChange}>
-          <option default >- CHOOSE ONE -</option>
-          {this.state.categories.map(category => {
-            return (
-              <option key={category} name={category}>{category}</option>
-            )
-          })}
-        </select>
-        {/*<LineChartCO2 />*/}
+        <div id="nav">
+            <h1>HUMAN FOOTPRINT</h1>
+          <select className="category-select" name="category" onChange={this.handleCategoryChange}>
+            <option default >- CHOOSE ONE -</option>
+            {this.state.categories.map(category => {
+              return (
+                <option key={category} name={category}>
+                  {category}
+                </option>
+              )
+            })}
+          </select>
+        </div>
         <div className="chart-container">
         {this.state.currentCategory === '- CHOOSE ONE -' ?
-          <ZoomChartCO2 />
+          <Footprint />
           :
           <AreaChartCO2
             data={this.state.data[this.state.currentCategory]}
             currentCategory={this.state.currentCategory}
             domain= {this.state.domain}
             ticks = {this.state.ticks} />
+          }
+        {/*  <Switch>
+            <Route exact path='/' component={Footprint} />
+            <Route path = '/levels' render={() => {
+              return(
+                <AreaChartCO2
+                data={this.state.data[this.state.currentCategory]}
+                currentCategory={this.state.currentCategory}
+                domain= {this.state.domain}
+                ticks = {this.state.ticks} />
+              )
+            }}
+               />
 
-        }
+          </Switch>*/}
         </div>
       </div>
 
