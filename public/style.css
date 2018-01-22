@@ -11,24 +11,45 @@ body {
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
-  color: rgb(247, 247, 195);
+  color: white;
   font-family: 'Roboto Mono', monospace;
 }
 
-h1{
-  margin-top: 5vh;
-  padding: 1vh 0 1vh 5vw;
+#nav{
   background-color:rgba(0,0,0,.5);
+  text-align: center;
+}
+
+h1{
+  padding: 1vh 0 1vh 5vw;
 }
 
 .chart-container{
-  padding: 7vw;
+  padding: 7% 0 0 10%;
 }
 
 #app {
-
   -webkit-box-sizing: border-box;
   -moz-box-sizing: border-box;
   box-sizing: border-box;
   padding: 10px;
 }
+
+.category-select{
+  width:98vw;
+  color: white;
+  background-color:rgba(0,0,0,.3);
+  font-size: 1.5em;
+  text-align-last: center;
+  border: none;
+  border-radius: 0;
+}
+
+.footprint-container{
+  width: 100vw
+}
+.svg{
+  height: 60vh;
+  width: 80vw;
+}
+
