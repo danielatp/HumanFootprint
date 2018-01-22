@@ -25,7 +25,7 @@ h1{
 }
 
 .chart-container{
-  padding: 7vw;
+  padding: 7% 0 0 10%;
 }
 
 #app {
@@ -49,26 +49,7 @@ h1{
   width: 100vw
 }
 .svg{
-  /* border: 1px solid red; */
   height: 60vh;
   width: 80vw;
 }
 
-/* .st0{
-  fill:none;
-  stroke:#45D6DD;
-  stroke-miterlimit:10;
-  stroke-dasharray: 800;
-  stroke-dashoffset: 0;
-  animation: dash 2s linear forwards;
-  -webkit-animation: dash 2s linear forwards;
-} */
-
-@-webkit-keyframes dash {
-  from {
-    stroke-dashoffset:800;
-  }
-  to {
-    stroke-dashoffset:0;
-  }
-}

@@ -14,8 +14,9 @@ export default class Home extends Component{
       data: data,
       categories: Object.keys(data),
       currentCategory: '- CHOOSE ONE -',
-      domain:[],
-      ticks:[]
+      domain: [],
+      ticks: [],
+      areaColor: ''
     }
     this.handleCategoryChange = this.handleCategoryChange.bind(this)
   }
@@ -27,25 +28,30 @@ export default class Home extends Component{
     const CelsiusTicks = [-0.5, -0.4, -0.3, -0.2, -0.1, 0, 0.1, 0.2, 0.3, 0.4, 0.5, 0.6, 0.7, 0.8, 0.9, 1];
     const CelsiusDomain = [-0.50, 1];
 
-    if(event.target.value === '- CHOOSE ONE -'){
-      this.setState({
-        currentCategory: event.target.value,
-      })
-    }
+    // if(event.target.value === '- CHOOSE ONE -'){
+    //   this.setState({
+
+    //   })
+    // }
+    this.setState({
+      currentCategory: event.target.value
+    })
 
     if(event.target.value === 'CO2'){
       this.setState({
-        currentCategory: event.target.value,
+        // currentCategory: event.target.value,
         domain:CO2Domain,
-        ticks:CO2Ticks
+        ticks:CO2Ticks,
+        areaColor: '#1a8712'
       })
     }
 
     if(event.target.value === 'Celsius'){
       this.setState({
-        currentCategory: event.target.value,
+        // currentCategory: event.target.value,
         domain:CelsiusDomain,
-        ticks:CelsiusTicks
+        ticks:CelsiusTicks,
+        areaColor: '#456bdb'
       })
     }
 
@@ -75,7 +81,8 @@ export default class Home extends Component{
             data={this.state.data[this.state.currentCategory]}
             currentCategory={this.state.currentCategory}
             domain= {this.state.domain}
-            ticks = {this.state.ticks} />
+            ticks = {this.state.ticks}
+            areaColor = {this.state.areaColor} />
           }
         {/*  <Switch>
             <Route exact path='/' component={Footprint} />
