@@ -1,21 +1,55 @@
+html{
+  margin:0;
+  padding: 0
+}
+
 body {
-  font-family: sans-serif;
+  margin: 0;
+  height: 100vh;
+  background-color: black;
+  background-image: url('./pollution.png');
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  color: white;
+  font-family: 'Roboto Mono', monospace;
 }
 
-a {
-  text-decoration: none;
+#nav{
+  background-color:rgba(0,0,0,.5);
+  text-align: center;
 }
 
-label {
-  display: block;
+h1{
+  padding: 1vh 0 1vh 5vw;
 }
 
-nav a {
-  display: inline-block;
-  margin: 1em;
+.chart-container{
+  padding: 7% 0 0 10%;
 }
 
-form div {
-  margin: 1em;
-  display: inline-block;
+#app {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+  padding: 10px;
 }
+
+.category-select{
+  width:98vw;
+  color: white;
+  background-color:rgba(0,0,0,.3);
+  font-size: 1.5em;
+  text-align-last: center;
+  border: none;
+  border-radius: 0;
+}
+
+.footprint-container{
+  width: 100vw
+}
+.svg{
+  height: 60vh;
+  width: 80vw;
+}
+
