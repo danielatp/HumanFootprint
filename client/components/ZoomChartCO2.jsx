@@ -10,7 +10,6 @@ const getAxisYDomain = (from, to, ref, offset) => {
   	if ( d[ref] > top ) top = d[ref];
     if ( d[ref] < bottom ) bottom = d[ref];
   });
-
   return [ (bottom|0) - offset, (top|0) + offset ]
 };
 
@@ -36,7 +35,6 @@ export default class ZoomChartCO2 extends Component {
 
   zoom(){
   	let { refAreaLeft, refAreaRight, info } = this.state;
-
 		if ( refAreaLeft === refAreaRight || refAreaRight === '' ) {
     	this.setState( () => ({
       	refAreaLeft : '',
@@ -61,7 +59,7 @@ export default class ZoomChartCO2 extends Component {
       right : refAreaRight,
       bottom, top, bottom2, top2
     } ) );
-  };
+  }
 
 	zoomOut() {
   	const { info } = this.state;

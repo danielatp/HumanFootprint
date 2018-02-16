@@ -1,12 +1,11 @@
 import React, { Component } from 'react'
 import createReactClass from 'create-react-class'
-import {AreaChart, Area, XAxis, YAxis, CartesianGrid, Tooltip} from 'recharts';
+import {AreaChart, Area, XAxis, YAxis, CartesianGrid, Tooltip} from 'recharts'
 
 export default class AreaChartCO2 extends Component{
 
   constructor(props){
     super(props)
-
   }
 
   render(){

@@ -1,5 +1,4 @@
 import React from 'react'
-// import ReactDOM from 'react-dom'
 import data from '../data'
 import createReactClass from 'create-react-class'
 import {LineChart, Line, XAxis, YAxis, CartesianGrid, Tooltip, Legend} from 'recharts';
@@ -17,11 +16,9 @@ const LineChartCO2 = createReactClass({
        <Tooltip/>
        <Legend />
        <Line type="monotone" dataKey="CO2" stroke="#8884d8" activeDot={{r: 8}}/>
-      {/* <Line type="monotone" dataKey="CO2" stroke="#82ca9d" />*/}
       </LineChart>
     );
   }
 })
-
 
 export default LineChartCO2

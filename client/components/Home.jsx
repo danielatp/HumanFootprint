@@ -6,7 +6,6 @@ import AreaChartCO2 from './AreaChartCO2.jsx'
 import ZoomChartCO2 from './ZoomChartCO2.jsx'
 import Footprint from './Footprint.jsx'
 
-
 export default class Home extends Component{
   constructor(props){
     super(props)
@@ -28,11 +27,6 @@ export default class Home extends Component{
     const CelsiusTicks = [-0.5, -0.4, -0.3, -0.2, -0.1, 0, 0.1, 0.2, 0.3, 0.4, 0.5, 0.6, 0.7, 0.8, 0.9, 1];
     const CelsiusDomain = [-0.50, 1];
 
-    // if(event.target.value === '- CHOOSE ONE -'){
-    //   this.setState({
-
-    //   })
-    // }
     this.setState({
       currentCategory: event.target.value
     })
@@ -40,8 +34,8 @@ export default class Home extends Component{
     if(event.target.value === 'CO2'){
       this.setState({
         // currentCategory: event.target.value,
-        domain:CO2Domain,
-        ticks:CO2Ticks,
+        domain: CO2Domain,
+        ticks: CO2Ticks,
         areaColor: '#1a8712'
       })
     }
@@ -49,12 +43,11 @@ export default class Home extends Component{
     if(event.target.value === 'Celsius'){
       this.setState({
         // currentCategory: event.target.value,
-        domain:CelsiusDomain,
-        ticks:CelsiusTicks,
+        domain: CelsiusDomain,
+        ticks: CelsiusTicks,
         areaColor: '#456bdb'
       })
     }
-
   }
 
   render(){
@@ -84,23 +77,8 @@ export default class Home extends Component{
             ticks = {this.state.ticks}
             areaColor = {this.state.areaColor} />
           }
-        {/*  <Switch>
-            <Route exact path='/' component={Footprint} />
-            <Route path = '/levels' render={() => {
-              return(
-                <AreaChartCO2
-                data={this.state.data[this.state.currentCategory]}
-                currentCategory={this.state.currentCategory}
-                domain= {this.state.domain}
-                ticks = {this.state.ticks} />
-              )
-            }}
-               />
-
-          </Switch>*/}
         </div>
       </div>
-
     );
   }
 }
