@@ -1,11 +1,11 @@
 import React from 'react';
 
 export default function FootprintSVG(props) {
-
   return (
     <svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlnsXlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 115.7 161.7" style={{enableBackground: 'new 0 0 115.7 161.7'}} xmlSpace="preserve" width="115.7" height="161.7" {...props}>
-    <style type="text/css" dangerouslySetInnerHTML={{__html: `\n\t.st0{fill:none;stroke:${props.color};stroke-miterlimit:5;}\n` }} >
-    </style>
+    <style
+      type="text/css" dangerouslySetInnerHTML={{__html: `\n\t.st0{fill:none;stroke:${props.color};stroke-miterlimit:5;}\n` }}
+    />
       <g>
         <path className="st0" d="M82.9,56.7c-9.6-0.8-9.6-0.8-10.3,4.4c8.8,3.1,10,2.9,14.5-3.9c2.4-3.7,5.3-5.2,9.6-3.2c3.2,1.5,5.7,0.8,7.5-2
         		c-5-7.1-13.6-9-20.1-4.4c0.6,1.3,1.3,2.7,2.3,4.9c-2.5-1.5-4.1-2.5-6-3.7c-1.4,1.4-2.7,2.8-4.3,4.4C78.4,54.3,79.9,55.1,82.9,56.7z
