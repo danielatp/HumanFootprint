@@ -1,9 +1,6 @@
 import React, { Component } from 'react'
-import createReactClass from 'create-react-class'
-import {Route, Link, Switch} from 'react-router-dom'
 import data from '../data';
 import AreaChartCO2 from './AreaChartCO2.jsx'
-import ZoomChartCO2 from './ZoomChartCO2.jsx'
 import Footprint from './Footprint.jsx'
 
 export default class Home extends Component{
@@ -31,7 +28,7 @@ export default class Home extends Component{
       currentCategory: event.target.value
     })
 
-    if(event.target.value === 'CO2'){
+    if (event.target.value === 'CO2'){
       this.setState({
         // currentCategory: event.target.value,
         domain: CO2Domain,
@@ -40,7 +37,7 @@ export default class Home extends Component{
       })
     }
 
-    if(event.target.value === 'Celsius'){
+    if (event.target.value === 'Celsius'){
       this.setState({
         // currentCategory: event.target.value,
         domain: CelsiusDomain,
